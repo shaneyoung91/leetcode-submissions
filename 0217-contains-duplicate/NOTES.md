@@ -11,7 +11,7 @@ Complexity
 ==========
 
 -   Time complexity:
-O(n^2) - Quadratic
+O(n^2) - Quadratic <br>
 Inefficient method. Can be optimized to O(n) - Linear, using new Set() and comparing length of Set and nums array.
 
 -   Space complexity:
