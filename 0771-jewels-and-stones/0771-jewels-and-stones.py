@@ -4,7 +4,7 @@ class Solution:
             result = 0
 
             for stone in stones:
-                if stone in list(jewels):
+                if stone in jewels:
                     result += 1
             
             return result
