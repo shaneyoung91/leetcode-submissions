@@ -1,12 +1,10 @@
 class Solution:
     def singleNumber(self, nums: List[int]) -> int:
         
-        # create a hashmap using Counter
-        # iterate through hashmap key-value
-        # if value == 1, return number
-        
-        hashmap = Counter(nums)
-        
-        for num, value in hashmap.items():
-            if value == 1:
-                return num
+       # for linear runtime and constant space complexity:
+       # find the sum of the hashset
+       # return 2 * hashset less sum of list
+    
+        hashset_sum = sum(set(nums))
+
+        return ((2 * hashset_sum) - sum(nums))
