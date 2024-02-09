@@ -1,11 +1,14 @@
 class Solution:
     def majorityElement(self, nums: List[int]) -> int:
-        # sort the nums array
-        # since majority element appears more than [length of array / 2] times, we can access the value with this formula
-        # return the value of the sorted nums array based on the index position of [length of array / 2]
         
-        sorted_nums = sorted(nums, reverse=True)
+        # create hashmap using Counter method
+        # iterate through hashmap, access key-value pairs using items method
+        # if value > length of nums array // 2, return key
         
-        return sorted_nums[(int(len(sorted_nums) / 2))]
+        hashmap = Counter(nums)
+        
+        for key, value in hashmap.items():
+            if value > len(nums) // 2:
+                return key
         
         
